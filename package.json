@@ -2,6 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -15,5 +16,8 @@
     "express": "^4.21.2",
     "pdfkit": "^0.16.0",
     "sqlite3": "^5.1.7"
+  },
+  "exports": {
+    "./routes/contractRoutes.js": "./routes/contractRoutes.js"
   }
 }
