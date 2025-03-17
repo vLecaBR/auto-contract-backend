@@ -50,25 +50,46 @@ export const createDatabase = () => {
   };
   
 
-  export const saveContract = (data, callback) => {
-    const query = `
-  INSERT INTO contracts (
-    artista, evento, data, horarioEvento, horarioPalco, nomeCasa, capacidadeLocal, enderecoCasa, cep, cidade, valorShow,
-    deposito1, deposito2, dataDeposito1, dataDeposito2, nomeContratantePJ, cpfCnpj, enderecoPJ, telefoneContatoPJ, emailPJ,
-    representanteLegal, enderecoRepLegal, cepRepLegal, rgRepLegal, cpfRepLegal, nomeContratantePF, enderecoPF, cepPF, cidadePF,
-    telefoneContatoPF, emailPF, rgPF, cpfPF, logistica, hospitalidade, enderecoHotel, efeitos, camarim
-  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-`;
+
 
 const values = [
-  data.artista || null, data.evento || null, data.data || null, data.horarioEvento || null, data.horarioPalco || null,
-  data.nomeCasa || null, data.capacidadeLocal || null, data.enderecoCasa || null, data.cep || null, data.cidade || null,
-  data.valorShow || null, data.deposito1 || null, data.deposito2 || null, data.dataDeposito1 || null, data.dataDeposito2 || null,
-  data.nomeContratantePJ || null, data.cpfCnpj || null, data.enderecoPJ || null, data.telefoneContatoPJ || null, data.emailPJ || null,
-  data.representanteLegal || null, data.enderecoRepLegal || null, data.cepRepLegal || null, data.rgRepLegal || null, data.cpfRepLegal || null,
-  data.nomeContratantePF || null, data.enderecoPF || null, data.cepPF || null, data.cidadePF || null, data.telefoneContatoPF || null,
-  data.emailPF || null, data.rgPF || null, data.cpfPF || null, data.logistica || null, data.hospitalidade || null,
-  data.enderecoHotel || null, data.efeitos || null, data.camarim || null
+  data.artista || null, 
+  data.evento || null, 
+  data.data || null, 
+  data.horarioEvento || null, 
+  data.horarioPalco || null,
+  data.nomeCasa || null, 
+  data.capacidadeLocal || null, 
+  data.enderecoCasa || null, 
+  data.cep || null, data.cidade || null,
+  data.valorShow || null, 
+  data.deposito1 || null, 
+  data.deposito2 || null, 
+  data.dataDeposito1 || null, 
+  data.dataDeposito2 || null,
+  data.nomeContratantePJ || null, 
+  data.cpfCnpj || null, 
+  data.enderecoPJ || null, 
+  data.telefoneContatoPJ || null, 
+  data.emailPJ || null,
+  data.representanteLegal || null, 
+  data.enderecoRepLegal || null, 
+  data.cepRepLegal || null, 
+  data.rgRepLegal || null, 
+  data.cpfRepLegal || null,
+  data.nomeContratantePF || null, 
+  data.enderecoPF || null, 
+  data.cepPF || null, 
+  data.cidadePF || null, 
+  data.telefoneContatoPF || null,
+  data.emailPF || null, 
+  data.rgPF || null, 
+  data.cpfPF || null, 
+  data.logistica || null, 
+  data.hospitalidade || null,
+  data.enderecoHotel || null, 
+  data.efeitos || null, 
+  data.camarim || null
 ];
 
 console.log("Valores para inserção:", values);
