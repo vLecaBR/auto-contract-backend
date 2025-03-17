@@ -50,7 +50,49 @@ export const createDatabase = () => {
   };
   
 
-
+  export const saveContract = (data, callback) => {
+    const query = `
+  INSERT INTO contracts (
+    artista, 
+    evento, 
+    data, 
+    horarioEvento, 
+    horarioPalco, 
+    nomeCasa, 
+    capacidadeLocal, 
+    enderecoCasa, 
+    cep, 
+    cidade, 
+    valorShow,
+    deposito1, 
+    deposito2, 
+    dataDeposito1, 
+    dataDeposito2, 
+    nomeContratantePJ, 
+    cpfCnpj, 
+    enderecoPJ, 
+    telefoneContatoPJ, 
+    emailPJ,
+    representanteLegal, 
+    enderecoRepLegal, 
+    cepRepLegal, 
+    rgRepLegal, 
+    cpfRepLegal, 
+    nomeContratantePF, 
+    enderecoPF, 
+    cepPF, 
+    cidadePF,
+    telefoneContatoPF, 
+    emailPF, 
+    rgPF, 
+    cpfPF, 
+    logistica, 
+    hospitalidade, 
+    enderecoHotel, 
+    efeitos, 
+    camarim
+  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`;
 
 const values = [
   data.artista || null, 
