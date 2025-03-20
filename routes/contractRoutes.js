@@ -30,6 +30,7 @@ router.post("/create", (req, res) => {
         filledTemplate = filledTemplate.replace(regex, contractData[key]);
       });
 
+
       // Gerar PDF
       const pdfPath = `contracts/contract_${contractId}.pdf`;
       const pdfDoc = new PDFDocument();
